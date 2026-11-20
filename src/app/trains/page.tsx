@@ -135,19 +135,17 @@ export default function TrainMonitorPage() {
             <button
               key={pill.id}
               onClick={() => setActiveFilter(pill.id)}
-              className={`px-2.5 py-1 rounded-lg text-xs font-mono font-medium transition-all flex items-center gap-1.5 ${
-                activeFilter === pill.id
-                  ? 'bg-sky-600 text-white border border-sky-400 shadow-xs'
-                  : 'bg-slate-900 text-slate-400 hover:text-white border border-slate-800'
-              }`}
+              className={`px-2.5 py-1 rounded-lg text-xs font-mono font-medium transition-all flex items-center gap-1.5 ${activeFilter === pill.id
+                ? 'bg-sky-600 text-white border border-sky-400 shadow-xs'
+                : 'bg-slate-900 text-slate-400 hover:text-white border border-slate-800'
+                }`}
             >
               <span>{pill.label}</span>
               <span
-                className={`text-[10px] px-1.5 py-0.2 rounded font-bold ${
-                  activeFilter === pill.id
-                    ? 'bg-sky-700 text-white'
-                    : 'bg-slate-800 text-slate-400'
-                }`}
+                className={`text-[10px] px-1.5 py-0.2 rounded font-bold ${activeFilter === pill.id
+                  ? 'bg-sky-700 text-white'
+                  : 'bg-slate-800 text-slate-400'
+                  }`}
               >
                 {pill.count}
               </span>
@@ -190,9 +188,8 @@ export default function TrainMonitorPage() {
                     <tr
                       key={train.trainNumber}
                       onClick={() => setSelectedTrain(train)}
-                      className={`hover:bg-slate-850 hover:bg-slate-800/50 transition cursor-pointer ${
-                        hasConflict ? 'bg-rose-950/20' : ''
-                      }`}
+                      className={`hover:bg-slate-850 hover:bg-slate-800/50 transition cursor-pointer ${hasConflict ? 'bg-rose-950/20' : ''
+                        }`}
                     >
                       {/* Train Number & Name */}
                       <td className="py-3 px-4">
@@ -241,11 +238,10 @@ export default function TrainMonitorPage() {
                       {/* Delay in Minutes */}
                       <td className="py-3 px-4">
                         <span
-                          className={`inline-flex items-center px-2 py-0.5 rounded text-[11px] font-mono font-semibold ${
-                            isDelayed
-                              ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30'
-                              : 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30'
-                          }`}
+                          className={`inline-flex items-center px-2 py-0.5 rounded text-[11px] font-mono font-semibold ${isDelayed
+                            ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30'
+                            : 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30'
+                            }`}
                         >
                           {isDelayed ? `+${train.delayMinutes}m` : '0m'}
                         </span>
@@ -254,17 +250,16 @@ export default function TrainMonitorPage() {
                       {/* Status */}
                       <td className="py-3 px-4">
                         <span
-                          className={`inline-flex items-center px-2 py-0.5 rounded text-[10px] font-mono font-medium ${
-                            train.status === 'AT_PLATFORM'
-                              ? 'bg-blue-500/20 text-blue-300 border border-blue-500/40'
-                              : train.status === 'WAITING_DEPARTURE'
+                          className={`inline-flex items-center px-2 py-0.5 rounded text-[10px] font-mono font-medium ${train.status === 'AT_PLATFORM'
+                            ? 'bg-blue-500/20 text-blue-300 border border-blue-500/40'
+                            : train.status === 'WAITING_DEPARTURE'
                               ? 'bg-purple-500/20 text-purple-300 border border-purple-500/40'
                               : train.status === 'APPROACHING'
-                              ? 'bg-sky-500/20 text-sky-300 border border-sky-500/40'
-                              : train.status === 'WAITING_PLATFORM'
-                              ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40'
-                              : 'bg-slate-800 text-slate-300 border border-slate-700'
-                          }`}
+                                ? 'bg-sky-500/20 text-sky-300 border border-sky-500/40'
+                                : train.status === 'WAITING_PLATFORM'
+                                  ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40'
+                                  : 'bg-slate-800 text-slate-300 border border-slate-700'
+                            }`}
                         >
                           {train.status}
                         </span>

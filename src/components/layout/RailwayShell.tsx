@@ -142,8 +142,8 @@ export function RailwayShell({ children }: { children: React.ReactNode }) {
           </div>
 
           <div className="mt-3 px-2.5 py-1.5 rounded-lg bg-slate-900/90 border border-slate-800 text-[10px] text-slate-300 flex items-center justify-between">
-            <span className="font-semibold text-slate-300">Group TYBDCE106</span>
-            <span className="text-sky-400 font-mono">MIT-WPU CSE</span>
+            <span className="font-semibold text-slate-300">Central Railway</span>
+            <span className="text-sky-400 font-mono">Solapur Division</span>
           </div>
         </div>
 
@@ -159,17 +159,15 @@ export function RailwayShell({ children }: { children: React.ReactNode }) {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`group flex items-center justify-between px-3 py-2.5 rounded-lg text-xs font-medium transition-all ${
-                  isActive
-                    ? 'bg-sky-500/15 text-sky-300 border border-sky-500/30 shadow-xs font-semibold'
-                    : 'text-slate-400 hover:text-white hover:bg-slate-850 hover:bg-slate-800/60'
-                }`}
+                className={`group flex items-center justify-between px-3 py-2.5 rounded-lg text-xs font-medium transition-all ${isActive
+                  ? 'bg-sky-500/15 text-sky-300 border border-sky-500/30 shadow-xs font-semibold'
+                  : 'text-slate-400 hover:text-white hover:bg-slate-850 hover:bg-slate-800/60'
+                  }`}
               >
                 <div className="flex items-center gap-2.5">
                   <Icon
-                    className={`h-4 w-4 ${
-                      isActive ? 'text-sky-400' : 'text-slate-400 group-hover:text-slate-200'
-                    }`}
+                    className={`h-4 w-4 ${isActive ? 'text-sky-400' : 'text-slate-400 group-hover:text-slate-200'
+                      }`}
                   />
                   <span>{item.name}</span>
                 </div>
@@ -272,16 +270,14 @@ export function RailwayShell({ children }: { children: React.ReactNode }) {
               </div>
               <div className="ml-1 pl-2 border-l border-slate-700">
                 <span
-                  className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[10px] font-medium font-mono ${
-                    ctx.isSimulationRunning
-                      ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40'
-                      : 'bg-amber-500/20 text-amber-300 border border-amber-500/40'
-                  }`}
+                  className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[10px] font-medium font-mono ${ctx.isSimulationRunning
+                    ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40'
+                    : 'bg-amber-500/20 text-amber-300 border border-amber-500/40'
+                    }`}
                 >
                   <span
-                    className={`h-1.5 w-1.5 rounded-full ${
-                      ctx.isSimulationRunning ? 'bg-emerald-400 animate-pulse' : 'bg-amber-400'
-                    }`}
+                    className={`h-1.5 w-1.5 rounded-full ${ctx.isSimulationRunning ? 'bg-emerald-400 animate-pulse' : 'bg-amber-400'
+                      }`}
                   ></span>
                   {ctx.isSimulationRunning ? 'RUNNING' : 'PAUSED'}
                 </span>
@@ -293,11 +289,10 @@ export function RailwayShell({ children }: { children: React.ReactNode }) {
               {/* Play / Pause Toggle */}
               <button
                 onClick={ctx.toggleSimulation}
-                className={`px-2.5 py-1.5 rounded text-xs font-medium flex items-center gap-1.5 transition-all ${
-                  ctx.isSimulationRunning
-                    ? 'bg-amber-600/30 text-amber-300 hover:bg-amber-600/40 border border-amber-500/30'
-                    : 'bg-emerald-600/30 text-emerald-300 hover:bg-emerald-600/40 border border-emerald-500/30'
-                }`}
+                className={`px-2.5 py-1.5 rounded text-xs font-medium flex items-center gap-1.5 transition-all ${ctx.isSimulationRunning
+                  ? 'bg-amber-600/30 text-amber-300 hover:bg-amber-600/40 border border-amber-500/30'
+                  : 'bg-emerald-600/30 text-emerald-300 hover:bg-emerald-600/40 border border-emerald-500/30'
+                  }`}
                 title={ctx.isSimulationRunning ? 'Pause simulation clock' : 'Start simulation clock'}
               >
                 {ctx.isSimulationRunning ? <Pause className="h-3.5 w-3.5" /> : <Play className="h-3.5 w-3.5" />}
@@ -361,13 +356,12 @@ export function RailwayShell({ children }: { children: React.ReactNode }) {
         {/* Global Notification Banner */}
         {ctx.notification && (
           <div
-            className={`px-5 py-2.5 flex items-center justify-between text-xs font-medium border-b transition-all ${
-              ctx.notification.type === 'success'
-                ? 'bg-emerald-950/90 text-emerald-300 border-emerald-800'
-                : ctx.notification.type === 'warning'
+            className={`px-5 py-2.5 flex items-center justify-between text-xs font-medium border-b transition-all ${ctx.notification.type === 'success'
+              ? 'bg-emerald-950/90 text-emerald-300 border-emerald-800'
+              : ctx.notification.type === 'warning'
                 ? 'bg-amber-950/90 text-amber-300 border-amber-800'
                 : 'bg-sky-950/90 text-sky-300 border-sky-800'
-            }`}
+              }`}
           >
             <div className="flex items-center gap-2.5">
               {ctx.notification.type === 'success' && <CheckCircle2 className="h-4 w-4 text-emerald-400" />}
@@ -462,11 +456,10 @@ export function RailwayShell({ children }: { children: React.ReactNode }) {
                     <button
                       key={d}
                       onClick={() => setEditDelay(d)}
-                      className={`flex-1 py-1 rounded text-[10px] font-mono border transition ${
-                        editDelay === d
-                          ? 'bg-sky-600 text-white border-sky-400 font-semibold'
-                          : 'bg-slate-900 text-slate-300 border-slate-700 hover:bg-slate-800'
-                      }`}
+                      className={`flex-1 py-1 rounded text-[10px] font-mono border transition ${editDelay === d
+                        ? 'bg-sky-600 text-white border-sky-400 font-semibold'
+                        : 'bg-slate-900 text-slate-300 border-slate-700 hover:bg-slate-800'
+                        }`}
                     >
                       {d === 0 ? 'On Time' : `+${d}m`}
                     </button>

@@ -108,20 +108,18 @@ export default function PriorityQueuePage() {
               return (
                 <div
                   key={item.trainNumber}
-                  className={`p-4 rounded-xl border transition flex flex-col md:flex-row items-start md:items-center justify-between gap-4 ${
-                    item.rank === 1
-                      ? 'bg-purple-950/20 border-purple-800/80 shadow-md shadow-purple-950/30'
-                      : 'bg-slate-900/60 border-slate-800 hover:border-slate-700/80'
-                  }`}
+                  className={`p-4 rounded-xl border transition flex flex-col md:flex-row items-start md:items-center justify-between gap-4 ${item.rank === 1
+                    ? 'bg-purple-950/20 border-purple-800/80 shadow-md shadow-purple-950/30'
+                    : 'bg-slate-900/60 border-slate-800 hover:border-slate-700/80'
+                    }`}
                 >
                   {/* Rank Badge & Train Info */}
                   <div className="flex items-center gap-3">
                     <div
-                      className={`h-11 w-11 rounded-xl flex flex-col items-center justify-center font-mono font-bold border ${
-                        item.rank === 1
-                          ? 'bg-purple-600 text-white border-purple-400 shadow-md shadow-purple-500/40 text-sm'
-                          : 'bg-slate-800 text-slate-300 border-slate-700 text-xs'
-                      }`}
+                      className={`h-11 w-11 rounded-xl flex flex-col items-center justify-center font-mono font-bold border ${item.rank === 1
+                        ? 'bg-purple-600 text-white border-purple-400 shadow-md shadow-purple-500/40 text-sm'
+                        : 'bg-slate-800 text-slate-300 border-slate-700 text-xs'
+                        }`}
                     >
                       <span className="text-[9px] uppercase font-sans">Rank</span>
                       <span>#{item.rank}</span>

@@ -68,16 +68,14 @@ export function CorridorTrackMap({ onSelectTrain }: { onSelectTrain: (train: Tra
               >
                 {/* Station Lamp Signal */}
                 <div
-                  className={`h-4 w-4 rounded-full border-2 flex items-center justify-center ${
-                    isTerminal
-                      ? 'bg-sky-500 border-sky-300 shadow-md shadow-sky-500/40'
-                      : 'bg-slate-900 border-slate-500 shadow-xs'
-                  }`}
+                  className={`h-4 w-4 rounded-full border-2 flex items-center justify-center ${isTerminal
+                    ? 'bg-sky-500 border-sky-300 shadow-md shadow-sky-500/40'
+                    : 'bg-slate-900 border-slate-500 shadow-xs'
+                    }`}
                 >
                   <div
-                    className={`h-1.5 w-1.5 rounded-full ${
-                      isTerminal ? 'bg-white' : 'bg-emerald-400'
-                    }`}
+                    className={`h-1.5 w-1.5 rounded-full ${isTerminal ? 'bg-white' : 'bg-emerald-400'
+                      }`}
                   ></div>
                 </div>
 
@@ -87,9 +85,8 @@ export function CorridorTrackMap({ onSelectTrain }: { onSelectTrain: (train: Tra
                 {/* Station Label & Distance */}
                 <div className="mt-1 text-center bg-slate-950/80 px-2 py-0.5 rounded border border-slate-800">
                   <span
-                    className={`text-[11px] font-bold block ${
-                      isTerminal ? 'text-white' : 'text-slate-300'
-                    }`}
+                    className={`text-[11px] font-bold block ${isTerminal ? 'text-white' : 'text-slate-300'
+                      }`}
                   >
                     {station.name}
                   </span>
@@ -116,11 +113,10 @@ export function CorridorTrackMap({ onSelectTrain }: { onSelectTrain: (train: Tra
               >
                 {/* Train Badge */}
                 <div
-                  className={`px-2.5 py-1 rounded-md text-[10px] font-mono font-bold flex items-center gap-1.5 shadow-lg border transition-all ${
-                    isDelayed
-                      ? 'bg-amber-950/90 text-amber-200 border-amber-500/70 shadow-amber-950'
-                      : 'bg-sky-950/90 text-sky-200 border-sky-400/70 shadow-sky-950'
-                  } group-hover:border-white`}
+                  className={`px-2.5 py-1 rounded-md text-[10px] font-mono font-bold flex items-center gap-1.5 shadow-lg border transition-all ${isDelayed
+                    ? 'bg-amber-950/90 text-amber-200 border-amber-500/70 shadow-amber-950'
+                    : 'bg-sky-950/90 text-sky-200 border-sky-400/70 shadow-sky-950'
+                    } group-hover:border-white`}
                 >
                   <Train className="h-3 w-3" />
                   <span>#{train.trainNumber}</span>
@@ -138,9 +134,8 @@ export function CorridorTrackMap({ onSelectTrain }: { onSelectTrain: (train: Tra
                 {/* Triangle Pointing to Track */}
                 <div className="flex justify-center -mt-0.5">
                   <div
-                    className={`h-2 w-2 transform rotate-45 ${
-                      isDelayed ? 'bg-amber-500' : 'bg-sky-400'
-                    }`}
+                    className={`h-2 w-2 transform rotate-45 ${isDelayed ? 'bg-amber-500' : 'bg-sky-400'
+                      }`}
                   ></div>
                 </div>
 

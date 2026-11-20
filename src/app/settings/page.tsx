@@ -9,7 +9,7 @@ import {
   Download,
   Train,
   Layers,
-  GraduationCap,
+  Radio,
 } from 'lucide-react';
 import { useRailway } from '@/context/RailwayContext';
 import { TrainRecord, TrainType } from '@/types/railway';
@@ -255,31 +255,31 @@ export default function SettingsPage() {
         </div>
       </div>
 
-      {/* College Project Academic Credits Card */}
+      {/* Corridor Technical Specifications Profile */}
       <div className="bg-[#091122] border border-slate-800 rounded-xl p-5 shadow-sm">
         <div className="flex items-center gap-2 pb-3 border-b border-slate-800">
-          <GraduationCap className="h-5 w-5 text-sky-400" />
+          <Radio className="h-5 w-5 text-sky-400" />
           <h3 className="text-xs font-bold text-white uppercase tracking-wider font-mono">
-            Academic Project Attribution & Context
+            Corridor Technical Specifications & Operational Scope
           </h3>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4 text-xs">
           <div>
-            <span className="text-[10px] text-slate-400 block uppercase">Project Title</span>
-            <span className="font-bold text-white">Intelligent Train Traffic & Platform Management</span>
+            <span className="text-[10px] text-slate-400 block uppercase font-mono">Corridor Section</span>
+            <span className="font-bold text-white">Daund Jn (0.0 km) ➔ Pune Jn (76.0 km)</span>
           </div>
           <div>
-            <span className="text-[10px] text-slate-400 block uppercase">Group ID & Institution</span>
-            <span className="font-bold text-white">TYBDCE106 • MIT School of Computing, MIT-WPU</span>
+            <span className="text-[10px] text-slate-400 block uppercase font-mono">Operating Division</span>
+            <span className="font-bold text-white">Solapur Division, Central Railway</span>
           </div>
           <div>
-            <span className="text-[10px] text-slate-400 block uppercase">Faculty Guide</span>
-            <span className="font-bold text-sky-400">Prof. Amol Dande</span>
+            <span className="text-[10px] text-slate-400 block uppercase font-mono">Electrification & Track</span>
+            <span className="font-bold text-sky-400">25 kV AC 50 Hz • Double Line Electric</span>
           </div>
           <div>
-            <span className="text-[10px] text-slate-400 block uppercase">Student Team</span>
-            <span className="font-bold text-slate-200">Krish Jha, Divyansh Thite, Riya Chavan, Kshitij Dogra</span>
+            <span className="text-[10px] text-slate-400 block uppercase font-mono">Signaling System</span>
+            <span className="font-bold text-slate-200">Automatic Block Signaling (ABS)</span>
           </div>
         </div>
       </div>
